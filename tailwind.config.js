@@ -20,6 +20,9 @@ export default {
         secondary: "#a1a1a1",
         muted: "#888888",
         faint: "#333333",
+        // Single accent — Vercel blue. Fill on dark, light variant for text/links.
+        brand: "#0070f3",
+        "brand-light": "#3291ff",
       },
       keyframes: {},
       animation: {},

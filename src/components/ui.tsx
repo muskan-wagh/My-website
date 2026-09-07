@@ -27,7 +27,7 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={cn("mt-24", className)}>
+    <section id={id} className={cn("mt-24 scroll-mt-24", className)}>
       {children}
     </section>
   );
@@ -68,7 +68,7 @@ export function QuietLink({
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-      className="text-[14px] text-[#888888] transition-colors duration-150 hover:text-[#ededed]"
+      className="text-[14px] text-[#888888] transition-colors duration-150 hover:text-[#3291ff]"
     >
       {children}
     </a>
@@ -90,16 +90,19 @@ export function PrimaryButton({
   href,
   children,
   external,
+  onClick,
 }: {
   href: string;
   children: ReactNode;
   external?: boolean;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }) {
   return (
     <a
       href={href}
+      onClick={onClick}
       {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-      className="inline-flex items-center justify-center rounded-md bg-[#ededed] px-5 py-2.5 text-[14px] font-medium text-black transition-colors duration-150 hover:bg-white"
+      className="inline-flex items-center justify-center rounded-md bg-[#0070f3] px-5 py-2.5 text-[14px] font-medium text-white transition-colors duration-150 hover:bg-[#3291ff]"
     >
       {children}
     </a>

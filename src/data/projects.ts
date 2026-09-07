@@ -7,6 +7,7 @@ export type Project = {
   highlights: string[];
   live?: string;
   github: string;
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -14,8 +15,9 @@ export const projects: Project[] = [
     id: "hirestack",
     title: "HireStack",
     subtitle: "RAG Candidate Discovery Engine",
+    image: "/projects/hirestack.webp",
     description:
-      "JD-aware retrieval that ranks resumes against a job description. Built for the INDIA RUNS challenge — from PDF ingestion to explainable scoring.",
+      "Paste a job description and get a ranked, explainable shortlist. Retrieval over resumes with skill-coverage scoring, async ingestion, and cached results.",
     tech: ["Next.js", "Express", "Qdrant", "OpenRouter", "BullMQ", "Redis"],
     highlights: [
       "Vector search on Qdrant (all-MiniLM-L6-v2, 384-d) + Jaccard skill coverage",
@@ -29,8 +31,9 @@ export const projects: Project[] = [
     id: "echo",
     title: "Echo",
     subtitle: "CI/CD Reliability Monitor",
+    image: "/projects/echo.webp",
     description:
-      "Triage instrument for CI. Ingests JUnit and workflow events, fingerprints failures by identity hash, and scores flakiness deterministically.",
+      "CI triage that fingerprints failures and scores flakiness deterministically, from ingest to PR comments.",
     tech: ["Fastify", "Next.js", "PostgreSQL", "GitHub App", "Clerk"],
     highlights: [
       "Identity hashing by file + suite + name; ANSI-strip and path redaction",
@@ -44,8 +47,9 @@ export const projects: Project[] = [
     id: "orbit",
     title: "Orbit",
     subtitle: "AI Job Application OS",
+    image: "/projects/orbit.webp",
     description:
-      "Turns Gmail into a structured job pipeline. Supabase-native with row-level security, from OAuth to matching.",
+      "Turns Gmail into a structured job-application pipeline, from OAuth ingest to a matching dashboard.",
     tech: ["Next.js", "Supabase", "Gmail API", "OpenAI", "PostgreSQL"],
     highlights: [
       "OS_* schema with RLS per user; session proxy and migrations",
@@ -59,8 +63,9 @@ export const projects: Project[] = [
     id: "campus-connect",
     title: "Campus Connect",
     subtitle: "Clubs & Events Platform",
+    image: "/projects/campus-connect.webp",
     description:
-      "Single source of truth for campus clubs and events. Replaces scattered WhatsApp and Instagram with RBAC and event lifecycle.",
+      "One home for campus clubs and events — roles, event lifecycle, and notifications with row-level security.",
     tech: ["Next.js", "Supabase", "PostgreSQL RLS", "Tailwind CSS"],
     highlights: [
       "Three roles: Admin, Club Lead, Student with verification flow",
@@ -77,6 +82,7 @@ export const secondaryProjects: Project[] = [
     id: "estate",
     title: "Estate",
     subtitle: "Real Estate Platform",
+    image: "/projects/estate.webp",
     description:
       "Browse plots and flats with media previews. Admin can publish properties with images, video, and blog posts.",
     tech: ["Next.js", "Supabase", "PostHog", "Tailwind CSS"],

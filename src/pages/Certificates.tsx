@@ -14,7 +14,19 @@ export default function Certificates() {
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {certificates.map((c) => (
           <Card key={c.title} className="flex h-full flex-col overflow-hidden">
-            <Visual label={c.title} />
+            {c.image ? (
+              <img
+                src={c.image}
+                alt={`${c.title} certificate`}
+                loading="lazy"
+                className="aspect-[16/10] w-full object-cover border-b border-[#1f1f1f]"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.display = "none";
+                }}
+              />
+            ) : (
+              <Visual label={c.title} />
+            )}
             <div className="flex flex-1 flex-col p-5">
               <h2 className="text-[15px] font-medium leading-[1.4] tracking-[-0.01em] text-[#ededed]">
                 {c.title}
@@ -26,7 +38,7 @@ export default function Certificates() {
                   href={c.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 border-t border-[#1f1f1f] pt-4 text-[14px] text-[#888888] transition-colors duration-150 hover:text-[#ededed] hover:underline hover:underline-offset-4"
+                  className="mt-4 border-t border-[#1f1f1f] pt-4 text-[14px] text-[#888888] transition-colors duration-150 hover:text-[#3291ff] hover:underline hover:underline-offset-4"
                 >
                   View credential
                 </a>
