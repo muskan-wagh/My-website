@@ -12,7 +12,7 @@ export default function App() {
         <div className="flex flex-col lg:flex-row lg:gap-10">
           <Sidebar />
           <div className="flex-1 min-w-0 flex flex-col">
-            <main className="flex-1 min-w-0">
+            <main className="flex-1 min-w-0 pb-20 lg:pb-0">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/certificates" element={<Certificates />} />
