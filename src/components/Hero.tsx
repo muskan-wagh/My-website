@@ -46,27 +46,23 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* small details — restrained, real info only */}
-        <div className="lg:w-[260px] shrink-0 lg:pt-2">
-          <div className="lg:border-l lg:border-[#1e2023] lg:pl-6 space-y-4">
-            <div>
-              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-[#6b7280]">Location</p>
-              <p className="mt-1 text-[14px] font-medium text-[#e8e8ea]">Indore, India</p>
-              <p className="text-[13px] text-[#6b7280]">B.Tech CS · SAGE University · 2023—2027</p>
-            </div>
-            <div>
-              <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-[#6b7280]">Availability</p>
-              <p className="mt-1 inline-flex items-center gap-1.5 text-[14px] font-medium text-[#e8e8ea]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#2dc97d]" aria-hidden />
-                Available for internships
-              </p>
-              <p className="text-[13px] text-[#6b7280]">Replies within 24 hours</p>
-            </div>
-            <div className="pt-1">
-              <a href="mailto:muskanwagh1608@gmail.com" className="font-mono text-[13px] text-[#9aa0a6] hover:text-[#2dc97d] transition-colors">
-                muskanwagh1608@gmail.com
-              </a>
-            </div>
+        {/* small details — real info, no decorative labels */}
+        <div className="lg:w-[280px] shrink-0 lg:pt-1">
+          <div className="lg:border-l lg:border-[#1e2023] lg:pl-6 space-y-3">
+            <p className="text-[14px] leading-[1.5] text-[#e8e8ea]">Indore, India — B.Tech CS, SAGE University (2023—2027)</p>
+            <p className="inline-flex items-center gap-2 text-[14px] text-[#9aa0a6]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#2dc97d]" aria-hidden />
+              Available for internships
+              <span className="text-[#2a2e33]">·</span>
+              <span className="text-[#6b7280]">replies in 24h</span>
+            </p>
+            <a
+              href="mailto:muskanwagh1608@gmail.com"
+              className="block pt-1 font-mono text-[13px] text-[#9aa0a6] hover:text-[#e8e8ea] transition-colors"
+            >
+              muskanwagh1608@gmail.com
+            </a>
+            <p className="font-mono text-[12px] text-[#6b7280]">GitHub · LinkedIn · Email</p>
           </div>
         </div>
       </div>
