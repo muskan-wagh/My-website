@@ -19,38 +19,38 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background: #0e0f11;
+  background: #000000;
 }
 
 body {
-  background: #0e0f11;
-  color: #e8e8ea;
+  background: #000000;
+  color: #ededed;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: rgba(45, 201, 125, 0.18);
+  background: #2e2e2e;
   color: #ffffff;
 }
 
 :focus-visible {
-  outline: 1.5px solid #2dc97d;
+  outline: 1.5px solid #666666;
   outline-offset: 2px;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0e0f11;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2e33;
+  background: #262626;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #34383e;
+  background: #333333;
 }

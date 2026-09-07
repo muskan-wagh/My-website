@@ -1,23 +1,22 @@
+import { Card, Section, SectionHeader } from "./ui";
+
 export default function Education() {
   return (
-    <section id="education" className="pt-14">
-      <h2 className="text-[18px] font-semibold tracking-[-0.02em] text-[#f2f2f3]">Education</h2>
-      <div className="mt-6">
-        <div className="rounded-[14px] border border-[#1e2023] bg-[#151618] p-5 md:p-6 hover:border-[#25282b] transition-colors">
-          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-            <div>
-              <h3 className="text-[15px] font-semibold tracking-[-0.01em] text-[#e8e8ea]">Bachelor of Technology — Computer Science</h3>
-              <p className="mt-1 text-[13.5px] text-[#9aa0a6]">SAGE University Indore</p>
-              <p className="mt-2 text-[13px] leading-[1.6] text-[#6b7280] max-w-[560px]">
-                Specialization in MERN stack development and scalable web architecture. Active in technical communities and campus developer groups.
-              </p>
-            </div>
-            <span className="inline-flex shrink-0 self-start rounded-full border border-[#232529] bg-[#0f1012] px-3 py-1.5 font-mono text-[11.5px] text-[#9aa0a6]">
-              2023 — 2027 · 3rd Year
-            </span>
-          </div>
+    <Section id="education">
+      <SectionHeader title="Education" />
+
+      <Card className="mt-8 p-6">
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+          <h3 className="text-[15px] font-medium tracking-[-0.01em] text-[#ededed]">
+            B.Tech, Computer Science
+          </h3>
+          <p className="shrink-0 text-[13px] text-[#888888]">2023 — 2027</p>
         </div>
-      </div>
-    </section>
+        <p className="mt-0.5 text-[14px] text-[#888888]">SAGE University Indore</p>
+        <p className="mt-2 max-w-[640px] text-[14px] leading-[1.65] text-[#a1a1a1]">
+          Focus on full-stack development and scalable web architecture.
+        </p>
+      </Card>
+    </Section>
   );
 }

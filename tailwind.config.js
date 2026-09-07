@@ -5,29 +5,24 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
-        mono: ["JetBrains Mono", "IBM Plex Mono", "ui-monospace", "monospace"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       colors: {
-        // Linux dark system palette
-        bg: "#0e0f11",
-        surface: "#151618",
-        "surface-2": "#1c1e20",
-        border: "#25282b",
-        "border-subtle": "#1e2023",
-        muted: "#9aa0a6",
-        subtle: "#1a1c1e",
-        accent: "#2dc97d",
-        "accent-dim": "rgba(45,201,125,0.12)",
+        // Restrained monochrome — Vercel principles, original values
+        bg: "#000000",
+        surface: "#0a0a0a",
+        "surface-hover": "#0e0e0e",
+        visual: "#111111",
+        border: "#1f1f1f",
+        "border-hover": "#2e2e2e",
+        "border-subtle": "#161616",
+        primary: "#ededed",
+        secondary: "#a1a1a1",
+        muted: "#888888",
+        faint: "#333333",
       },
-      keyframes: {
-        blink: {
-          "0%, 50%": { opacity: "1" },
-          "51%, 100%": { opacity: "0" },
-        },
-      },
-      animation: {
-        blink: "blink 1.2s step-end infinite",
-      },
+      keyframes: {},
+      animation: {},
     },
   },
   plugins: [],

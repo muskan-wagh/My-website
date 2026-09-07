@@ -1,33 +1,38 @@
-import { ExternalLink } from "lucide-react";
 import { certificates } from "../data/certificates";
+import { Card, Visual } from "../components/ui";
 
 export default function Certificates() {
   return (
-    <div className="pt-2 lg:pt-8">
-      <h1 className="text-[28px] font-semibold tracking-[-0.03em] text-[#f2f2f3]">Certificates</h1>
-      <p className="mt-2 text-[15px] leading-[1.6] text-[#9aa0a6] max-w-[560px]">
-        Verified certifications — images can be added later. Same card system as projects.
+    <div className="pb-4 pt-16 md:pt-20">
+      <h1 className="text-[32px] font-semibold tracking-[-0.03em] text-[#ededed]">
+        Certificates
+      </h1>
+      <p className="mt-2 max-w-[560px] text-[15px] leading-[1.65] text-[#888888]">
+        Certifications and recognitions.
       </p>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {certificates.map((c) => (
-          <div key={c.title} className="flex flex-col overflow-hidden rounded-[14px] border border-[#1e2023] bg-[#151618] hover:border-[#25282b] transition-colors">
-            <div className="aspect-[4/3] bg-[#0f1012] border-b border-[#1a1c1e] flex items-center justify-center">
-              <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-[#3a3f45]">Image — add later</span>
-            </div>
+          <Card key={c.title} className="flex h-full flex-col overflow-hidden">
+            <Visual label={c.title} />
             <div className="flex flex-1 flex-col p-5">
-              <h2 className="text-[14px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#e8e8ea]">{c.title}</h2>
-              <p className="mt-1.5 font-mono text-[11.5px] text-[#6b7280]">
-                {c.issuer} · {c.year}
-              </p>
-              <p className="mt-2 text-[13px] leading-[1.5] text-[#9aa0a6] line-clamp-2">{c.description}</p>
+              <h2 className="text-[15px] font-medium leading-[1.4] tracking-[-0.01em] text-[#ededed]">
+                {c.title}
+              </h2>
+              <p className="mt-1.5 text-[14px] text-[#888888]">{c.issuer}</p>
+              <p className="mt-0.5 text-[13px] text-[#888888]">{c.year}</p>
               {c.link && (
-                <a href={c.link} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-[12.5px] font-medium text-[#9aa0a6] hover:text-[#e8e8ea] transition-colors">
-                  View credential <ExternalLink size={12} />
+                <a
+                  href={c.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 border-t border-[#1f1f1f] pt-4 text-[14px] text-[#888888] transition-colors duration-150 hover:text-[#ededed] hover:underline hover:underline-offset-4"
+                >
+                  View credential
                 </a>
               )}
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </div>

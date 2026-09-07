@@ -1,24 +1,26 @@
 import { skillGroups } from "../data/skills";
+import { Section, SectionHeader } from "./ui";
 
 export default function Skills() {
   return (
-    <section id="skills" className="pt-14">
-      <h2 className="text-[18px] font-semibold tracking-[-0.02em] text-[#f2f2f3]">Technical skills</h2>
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {skillGroups.map((g) => (
-          <div key={g.label} className="rounded-[14px] border border-[#1e2023] bg-[#151618] p-5 hover:border-[#25282b] transition-colors">
-            <h3 className="font-mono text-[11px] tracking-[0.08em] uppercase text-[#6b7280]">{g.label}</h3>
-            <div className="mt-3 flex flex-wrap gap-1.5 font-mono text-[13px] leading-[1.6]">
-              {g.items.map((item, idx) => (
-                <span key={item} className="inline-flex items-center gap-1.5">
-                  <span className="text-[#9aa0a6]">{item}</span>
-                  {idx < g.items.length - 1 && <span className="text-[#2a2e33]">·</span>}
-                </span>
-              ))}
-            </div>
+    <Section id="skills">
+      <SectionHeader title="Skills" />
+
+      <div className="mt-8">
+        {skillGroups.map((g, i) => (
+          <div
+            key={g.label}
+            className={
+              i === 0
+                ? "flex flex-col gap-1 py-4 sm:flex-row sm:gap-8"
+                : "flex flex-col gap-1 border-t border-[#161616] py-4 sm:flex-row sm:gap-8"
+            }
+          >
+            <p className="w-28 shrink-0 text-[14px] font-medium text-[#ededed]">{g.label}</p>
+            <p className="text-[14px] leading-[1.7] text-[#888888]">{g.items.join(" · ")}</p>
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }
